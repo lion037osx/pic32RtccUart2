@@ -10,9 +10,9 @@ CND_CONF=default
 CND_DISTDIR=dist
 TMPDIR=build/${CND_CONF}/${IMAGE_TYPE}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/SerialPortUart2pic32.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-OUTPUT_BASENAME=SerialPortUart2pic32.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-PACKAGE_TOP_DIR=serialportuart2pic32.x/
+OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/pic32RtccUart2.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+OUTPUT_BASENAME=pic32RtccUart2.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+PACKAGE_TOP_DIR=pic32rtccuart2.x/
 
 # Functions
 function checkReturnCode
@@ -57,15 +57,15 @@ mkdir -p ${TMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory ${TMPDIR}/serialportuart2pic32.x/bin
+makeDirectory ${TMPDIR}/pic32rtccuart2.x/bin
 copyFileToTmpDir "${OUTPUT_PATH}" "${TMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/package/serialportuart2pic32.x.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/package/pic32rtccuart2.x.tar
 cd ${TMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/serialportuart2pic32.x.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/pic32rtccuart2.x.tar *
 checkReturnCode
 
 # Cleanup

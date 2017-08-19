@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=SerialPortUart2pic32.X
+PROJECTNAME=pic32RtccUart2.X
 
 # Active Configuration
 DEFAULTCONF=default
