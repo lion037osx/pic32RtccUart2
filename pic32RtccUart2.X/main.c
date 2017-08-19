@@ -9,7 +9,7 @@
 #pragma config POSCMOD = HS, FNOSC = PRIPLL
 //#pragma config DEBUG = ON
 
-#include "ds1307rtcc.h"
+#include "mcp79401.h"
 
 #define CARRIER 0
 /*************  FUNCTIONS *****************/
@@ -18,8 +18,8 @@ UINT8 err_flg=0x00;
 //void i2c_rtcc_wr(UINT8 register_rtcc,UINT8 time_var );
 //UINT8  i2c_rtcc_rd(UINT8  register_rtcc);
 void DelayMs(unsigned t);
-void init_ds1307(void);
-void init_ds1307_2(void);
+void startBatteryMcp79401(void);
+void initMcp79401(void);
 void sram_byte_write_i2c1(UINT8 address,UINT8 data );
 UINT8 random_read(UINT8 address);
 
@@ -44,9 +44,9 @@ I2CSetFrequency(I2C1,GetSystemClock(),I2C_CLOCK_FREQ);
 
 LED_A0=LED_A1=LED_A2=LED_A3=0;
 //UART2PrintString("step1\r\n");
-init_ds1307_2();
+initMcp79401();
 //UART2PrintString("step2\r\n");
-init_ds1307();
+startBatteryMcp79401();
 
     while(1){     
             
@@ -163,7 +163,7 @@ UINT8 random_read(UINT8 address){
 
 
 
-void init_ds1307(void){             // initialization of the I2C RTCC: enables the battery circuit                                     
+void startBatteryMcp79401(void){             // initialization of the I2C RTCC: enables the battery circuit                                     
 // START bit is located in the Sec register
                                      // time/date will be set in 'ini_i2c_time()' 
 
@@ -172,7 +172,7 @@ day = random_read(ADDR_DAY); 		 // read day + OSCON bit
 sram_byte_write_i2c1(ADDR_DAY,day|VBATEN);
 }	 // enable the battery back-up  
 
-void init_ds1307_2(void){             // initialization of time/date vars on the I2C RTCC
+void initMcp79401(void){             // initialization of time/date vars on the I2C RTCC
 unsigned char day=0;   				 // local variable (stores the RTCC DAY register) 
 
 day = random_read(ADDR_DAY);   		 // read day + OSCON bit 

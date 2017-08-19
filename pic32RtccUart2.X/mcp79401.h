@@ -1,12 +1,12 @@
 /* 
- * File:   ds1307rtcc.h
+ * File:   mcp79401.h
  * Author: leo
  *
- * Created on July 3, 2017, 11:25 PM
+ * Created on August 19, 2017, 2:56 PM
  */
 
-#ifndef DS1307RTCC_H
-#define	DS1307RTCC_H
+#ifndef MCP79401_H
+#define	MCP79401_H
 
 #ifdef	__cplusplus
 extern "C" {
@@ -91,9 +91,11 @@ extern "C" {
      #define  HOUR_12           0x40       //  12 hours format   (ADDR_HOUR)
 
 
+
+
 #ifdef	__cplusplus
 }
 #endif
 
-#endif	/* DS1307RTCC_H */
+#endif	/* MCP79401_H */
 
