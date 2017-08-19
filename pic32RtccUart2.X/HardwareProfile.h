@@ -19,7 +19,7 @@
 extern "C" {
 #endif
     
-#define debug UART2PrintString    
+#define debug UART2Puts    
 
 #define GetSystemClock()            (80000000ul)
 #define GetPeripheralClock()        (GetSystemClock()/2) 

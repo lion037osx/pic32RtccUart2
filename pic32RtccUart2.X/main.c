@@ -37,7 +37,7 @@ SYSTEMConfigPerformance(GetSystemClock());
 // 1. init the UART2 serial port 
 initU2();
 config_leds();
-UART2PrintString("\r\n\t\t\t******************** PROJECT  PIC32 UART2  I2C RTCC MCP79410 ********************\r\n\r\n\r\n");
+UART2Puts("\r\n\t\t\t******************** PROJECT  PIC32 UART2  I2C RTCC MCP79410 ********************\r\n\r\n\r\n");
 init_sda_scl();
 OpenI2C1(I2C_EN|I2C_ACK_EN,BRG_VAL);
 I2CSetFrequency(I2C1,GetSystemClock(),I2C_CLOCK_FREQ);
@@ -205,8 +205,8 @@ sec=random_read(ADDR_SEC);
 year=2000+(((year>>4)&0x7)*10)+(year&0xf);
 
     sprintf(str," date %d/%1d%1d/%1d%1d",year,(month>>4)&0x7,month&0xf,(day>>4)&0x7,day&0xf);
-    UART2PrintString(str);
+    UART2Puts(str);
         sprintf(str,"  %1d%1d:%1d%1d:%1d%1d\r\n",(hour>>4)&0x7,hour&0xf,(min>>4)&0x7,min&0xf,(sec>>4)&0x7,sec&0xf);
-    UART2PrintString(str);
+    UART2Puts(str);
 }
 

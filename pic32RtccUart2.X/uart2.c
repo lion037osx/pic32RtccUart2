@@ -21,7 +21,7 @@ void initU2( void)
 
 
 
-        void UART2PutChar( char ch )
+void UART2PutChar( char ch )
 {
     U2TXREG = ch;
     #if !defined(__PIC32MX__)
@@ -30,7 +30,7 @@ void initU2( void)
     while(U2STAbits.TRMT == 0);
 }
         
-void UART2PrintString( char *str )
+void UART2Puts( char *str )
 {
     unsigned char c;
 

@@ -14,7 +14,7 @@ extern "C" {
 #endif
 
 void initU2( void);
-void UART2PrintString( char *str );
+void UART2Puts( char *str );
 
 
 #ifdef	__cplusplus
