@@ -59,8 +59,8 @@ merge:
 	#git remote -v
 
 
-update:
+upgrade:
 	git add .
-	git commit -m "update"
+	git commit -m "upgrade"
 	git push origin master
 
