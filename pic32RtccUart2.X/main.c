@@ -203,12 +203,6 @@ hour=random_read(ADDR_HOUR);
 min=random_read(ADDR_MIN) ;   	   
 sec=random_read(ADDR_SEC);
 year=2000+(((year>>4)&0x7)*10)+(year&0xf);
-/*
-day=(((day>>4)&0x7)*10)+(day&0xf);
-hour=(((hour>>4)&0x7)*10)+(hour&0xf);
-min=(((min>>4)&0x7)*10)+(min&0xf);
-sec=(((sec>>4)&0x7)*10)+(sec&0xf)+;
-*/
 
     sprintf(str," date %d/%1d%1d/%1d%1d",year,(month>>4)&0x7,month&0xf,(day>>4)&0x7,day&0xf);
     UART2PrintString(str);
