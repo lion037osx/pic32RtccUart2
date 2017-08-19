@@ -1,7 +1,7 @@
 
 
 #include "HardwareProfile.h"
-#include "ds1307rtcc.h"
+#include "mcp79401.h"
 
 
 int  RcvDataI2C(unsigned int address) {

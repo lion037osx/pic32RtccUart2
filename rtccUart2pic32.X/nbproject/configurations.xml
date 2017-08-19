@@ -6,9 +6,9 @@
                    projectFiles="true">
       <itemPath>HardwareProfile.h</itemPath>
       <itemPath>uart2.h</itemPath>
-      <itemPath>ds1307rtcc.h</itemPath>
       <itemPath>configHardware.h</itemPath>
       <itemPath>systemClock.h</itemPath>
+      <itemPath>mcp79401.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

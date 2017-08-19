@@ -9,7 +9,7 @@
 #pragma config POSCMOD = HS, FNOSC = PRIPLL
 //#pragma config DEBUG = ON
 
-#include "ds1307rtcc.h"
+#include "mcp79401rtcc.h"
 
 #define CARRIER 0
 /*************  FUNCTIONS *****************/
