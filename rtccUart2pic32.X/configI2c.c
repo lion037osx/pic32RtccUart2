@@ -44,7 +44,7 @@ void i2c_wait(unsigned int cnt)
 void i2c_rtcc_wr(UINT8 register_rtcc,UINT8 time ){
 	StartI2C1();	        //Send the Start Bit
 	IdleI2C1();		//Wait to complete
- 	MasterWriteI2C1((ADDR_RTCC_WRITE << 1) | 0x00);     
+ 	MasterWriteI2C1(*(unsigned char *) ((ADDR_RTCC_WRITE <<1)|0x00));     
     	IdleI2C1();	
  	MasterWriteI2C1((register_rtcc << 1) | 0);     
     	IdleI2C1();	

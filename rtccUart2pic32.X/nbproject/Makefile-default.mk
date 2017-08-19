@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=uart2.c mainSerialPort12c.c aux.c
+SOURCEFILES_QUOTED_IF_SPACED=uart2.c configI2c.c main.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/uart2.o ${OBJECTDIR}/mainSerialPort12c.o ${OBJECTDIR}/aux.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/uart2.o.d ${OBJECTDIR}/mainSerialPort12c.o.d ${OBJECTDIR}/aux.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/uart2.o ${OBJECTDIR}/configI2c.o ${OBJECTDIR}/main.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/uart2.o.d ${OBJECTDIR}/configI2c.o.d ${OBJECTDIR}/main.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/uart2.o ${OBJECTDIR}/mainSerialPort12c.o ${OBJECTDIR}/aux.o
+OBJECTFILES=${OBJECTDIR}/uart2.o ${OBJECTDIR}/configI2c.o ${OBJECTDIR}/main.o
 
 # Source Files
-SOURCEFILES=uart2.c mainSerialPort12c.c aux.c
+SOURCEFILES=uart2.c configI2c.c main.c
 
 
 CFLAGS=
@@ -112,17 +112,17 @@ ${OBJECTDIR}/uart2.o: uart2.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/uart2.o 
 	@${FIXDEPS} "${OBJECTDIR}/uart2.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/uart2.o.d" -o ${OBJECTDIR}/uart2.o uart2.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/mainSerialPort12c.o: mainSerialPort12c.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/configI2c.o: configI2c.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/mainSerialPort12c.o.d 
-	@${RM} ${OBJECTDIR}/mainSerialPort12c.o 
-	@${FIXDEPS} "${OBJECTDIR}/mainSerialPort12c.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/mainSerialPort12c.o.d" -o ${OBJECTDIR}/mainSerialPort12c.o mainSerialPort12c.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD) 
+	@${RM} ${OBJECTDIR}/configI2c.o.d 
+	@${RM} ${OBJECTDIR}/configI2c.o 
+	@${FIXDEPS} "${OBJECTDIR}/configI2c.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/configI2c.o.d" -o ${OBJECTDIR}/configI2c.o configI2c.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/aux.o: aux.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/aux.o.d 
-	@${RM} ${OBJECTDIR}/aux.o 
-	@${FIXDEPS} "${OBJECTDIR}/aux.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/aux.o.d" -o ${OBJECTDIR}/aux.o aux.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD) 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD) 
 	
 else
 ${OBJECTDIR}/uart2.o: uart2.c  nbproject/Makefile-${CND_CONF}.mk
@@ -131,17 +131,17 @@ ${OBJECTDIR}/uart2.o: uart2.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/uart2.o 
 	@${FIXDEPS} "${OBJECTDIR}/uart2.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/uart2.o.d" -o ${OBJECTDIR}/uart2.o uart2.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/mainSerialPort12c.o: mainSerialPort12c.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/configI2c.o: configI2c.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/mainSerialPort12c.o.d 
-	@${RM} ${OBJECTDIR}/mainSerialPort12c.o 
-	@${FIXDEPS} "${OBJECTDIR}/mainSerialPort12c.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/mainSerialPort12c.o.d" -o ${OBJECTDIR}/mainSerialPort12c.o mainSerialPort12c.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD) 
+	@${RM} ${OBJECTDIR}/configI2c.o.d 
+	@${RM} ${OBJECTDIR}/configI2c.o 
+	@${FIXDEPS} "${OBJECTDIR}/configI2c.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/configI2c.o.d" -o ${OBJECTDIR}/configI2c.o configI2c.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/aux.o: aux.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/aux.o.d 
-	@${RM} ${OBJECTDIR}/aux.o 
-	@${FIXDEPS} "${OBJECTDIR}/aux.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/aux.o.d" -o ${OBJECTDIR}/aux.o aux.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD) 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD) 
 	
 endif
 
